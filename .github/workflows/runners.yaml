@@ -22,6 +22,11 @@ jobs:
             sudo apt update --yes
             sudo apt install nginx --yes
             sudo nginx -v
+
+            echo "Imprime variável no escopo da Action"
+            echo "----------------------------------------"
+            echo "Variável no esco da ACTION: $ENV_ACTION"
+
         - name: "Imprime os valores das variáveis"
           run: |
             echo "Imprime as varíavies no diversos escopos"
