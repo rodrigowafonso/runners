@@ -27,7 +27,7 @@ jobs:
             echo "Imprime as varíavies no diversos escopos"
             echo "----------------------------------------"
 
-            echo "Variável no escopo do Workflow: $ENV_WORKFLOW
+            echo "Variável no escopo do Workflow: $ENV_WORKFLOW"
             echo "Variável no escopo do JOB: $ENV_JOB"
             echo "Variável no esco da ACTION: $ENV_ACTION"
 
