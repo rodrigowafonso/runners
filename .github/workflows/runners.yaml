@@ -37,5 +37,20 @@ jobs:
             echo "Variável no esco da ACTION: $ENV_ACTION"
 
             echo "----------------------------------------"
+
+            echo "Imprime as varíavies de ambiente padrão GITHUB"
+            echo "----------------------------------------"
+
+            echo "Imprime nome da Action: $GITHUB_ACTION"
+            echo "Imprime o Path do Repositório: $GITHUB_ACTION_PATH"
+            echo "Imprime o Owner do Repositório: $GITHUB_ACTION_REPOSITORY"
+            echo "Imprime qual o tipo de Runner: $GITHUB_ACTIONS"
+            echo "Imprime o nome do Autor: $GITHUB_ACTOR"
+            echo "Imprime o ID do Autor: $GITHUB_ACTOR_ID"
+            echo "Imprime a API URL da: $GITHUB_API_URL"
+            echo "Imprime qual a Branche: $GITHUB_BASE_REF"
+            echo "Imprime path da variáveis runners: $GITHUB_ENV"
+            echo "Imprime o método do start da Action: $GITHUB_EVENT_NAME"
+            
         
 
