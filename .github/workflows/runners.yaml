@@ -5,7 +5,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
 jobs:
-    INSTALL-NGIN:
+    INSTALL-NGINX:
       runs-on: ubuntu-latest
       steps:
         - name: "Instalando o Webserver Nginx"
