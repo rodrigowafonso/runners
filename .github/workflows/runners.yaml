@@ -2,16 +2,16 @@ name: Install Webserver Nginx
 
 on:
   push:
-  branches: ["main"]
-workflow_dispatch:
+    branches: ["main"]
+  workflow_dispatch:
 jobs:
     INSTALL-NGIN:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Instalando o Webserver Nginx
-        run: |
-        sudo apt update --yes
-        sudo apt install nginx --yes
-        sudo nginx -v 
+      runs-on: ubuntu-latest
+      steps:
+        - name: "Instalando o Webserver Nginx"
+          run: |
+            sudo apt update --yes
+            sudo apt install nginx --yes
+            sudo nginx -v 
         
 
