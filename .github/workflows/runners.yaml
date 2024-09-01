@@ -4,14 +4,33 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+env:
+    # Declarando variável no escopo do Workflow
+    ENV_WORKFLOW: "RWA Workflow"
 jobs:
     INSTALL-NGINX:
       runs-on: ubuntu-latest
+      env:
+        # Declarando variável no escopo do Job
+        ENV_JOB: "RWA JOB"
       steps:
         - name: "Instalando o Webserver Nginx"
+          env: 
+            # Declarando variável no escopo da Action
+            ENV_ACTION: "RWA ACTION"
           run: |
             sudo apt update --yes
             sudo apt install nginx --yes
-            sudo nginx -v 
+            sudo nginx -v
+        - name: "Imprime os valores das variáveis"
+          run: |
+            echo "Imprime as varíavies no diversos escopos"
+            echo "----------------------------------------"
+
+            echo "Variável no escopo do Workflow: $ENV_WORKFLOW
+            echo "Variável no escopo do JOB: $ENV_JOB"
+            echo "Variável no esco da ACTION: $ENV_ACTION"
+
+            echo "----------------------------------------"
         
 
